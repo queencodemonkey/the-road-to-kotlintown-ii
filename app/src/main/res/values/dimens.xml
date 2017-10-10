@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_margin_horizontal">16dp</dimen>
+    <dimen name="activity_margin_vertical">16dp</dimen>
+    <dimen name="keyline_start">144dp</dimen>
+    <dimen name="keyline_end">16dp</dimen>
+    <dimen name="content_padding_bottom">16dp</dimen>
+    <dimen name="content_padding_top">64dp</dimen>
+    <dimen name="text_gap">16dp</dimen>
+</resources>

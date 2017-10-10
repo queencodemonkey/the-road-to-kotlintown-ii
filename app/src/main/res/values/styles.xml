@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="TheMostBeautifulStyleEver">
+        <item name="android:background">@drawable/image_gabriela_rodriguez_oreo</item>
+        <item name="colorPrimary">#FF0000</item>
+        <item name="colorAccent">#FFFF00</item>
+    </style>
+
+    <declare-styleable name="MyStyleable">
+        <attr name="android:background" />
+        <attr name="colorPrimary" />
+        <attr name="colorAccent" />
+    </declare-styleable>
+
+</resources>

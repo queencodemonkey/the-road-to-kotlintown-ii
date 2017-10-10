@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+ext.versions = [
+        // Android
+        targetSdkVersion    : 26,
+        minSdkVersion       : 19,
+        buildtools          : "26.0.1",
+        support             : "26.1.0",
+
+        // Components
+        constraintlayout : "1.0.2",
+
+        // Testing
+        espresso            : "3.0.1",
+        junit               : "4.12",
+
+        // UI
+        calligraphy         : "2.3.0",
+
+        // Utility
+        butterknife         : "8.8.1"
+]
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0
+
+android {
+    compileSdkVersion versions.targetSdkVersion
+    buildToolsVersion versions.buildtools
+    defaultConfig {
+        applicationId "rt.kotlintown"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '26.0.2'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    // Android
+    implementation "com.android.support:appcompat-v7:$versions.support"
+    implementation "com.android.support:support-v4:$versions.support"
+    implementation "com.android.support:design:$versions.support"
+
+    // Android: Components
+    implementation "com.android.support.constraint:constraint-layout:$versions.constraintlayout"
+    implementation "com.android.support.constraint:constraint-layout-solver:$versions.constraintlayout"
+
+    // Kotlin
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    // Testing
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$versions.espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    })
+    testImplementation "junit:junit:$versions.junit"
+}

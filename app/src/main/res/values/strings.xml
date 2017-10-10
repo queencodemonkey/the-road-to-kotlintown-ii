@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kotlintown: Part Deux</string>
+
+    <string name="image_title">Oreo</string>
+    <string name="image_artist">Gabriela Rodríguez</string>
+
+    <string name="label_change">Swap</string>
+
+    <string name="no_recycler_view">Oh no! No RecyclerView here. :(</string>
+    <string name="recycler_view_update">RecyclerView Update! Woot!</string>
+
+</resources>
